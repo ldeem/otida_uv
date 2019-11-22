@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+    <title>OTIDA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="shorcut icon" href="images/ICON.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script src="js/otida.js"></script>
+</head>
+
+<div class="d-flex justify-content-between">
+    <img src="images/ipn.png">
+    <img src="images/escom.png">
+</div>
+<nav>
+    <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="fundamentacionteorica.html">Fundamentación Teórica</a></li>
+        <li><a href="otida.html">Crear OTIDA</a></li>
+    </ul>
+</nav>
+
+<body>
+  <div class="fcontainer">
+
+    
+    <div class="drags" id="operacion" data-simbolo="operacion" data-toggle="tooltip" data-placement="top" title="operacion"></div>
+    <div class="drags" id="inspeccion" data-simbolo="inspeccion" data-toggle="tooltip" data-placement="top" title="inspeccion"></div>
+    <div class="drags" id="actividadcomplementaria" data-simbolo="actividadcomplementaria" data-toggle="tooltip" data-placement="top" title="actividad complementaria"></div>
+    <div class="drags" id="transporte" data-simbolo="transporte" data-toggle="tooltip" data-placement="top" title="transporte"></div>
+    <div class="drags" id="almacen" data-simbolo="almacen" data-toggle="tooltip" data-placement="top" title="almacen"></div>
+    <div class="drags" id="demora" data-simbolo="demora" data-toggle="tooltip" data-placement="top" title="demora"></div>
+
+    <div class="drags" id="lineasv" data-simbolo="lineasv" data-toggle="tooltip" data-placement="top" title="conector vertical"></div>
+    <div class="drags" id="linealv" data-simbolo="linealv" data-toggle="tooltip" data-placement="top" title="conector vertical largo"></div>
+
+    <div class="drags" id="lineash" data-simbolo="lineash" data-toggle="tooltip" data-placement="top" title="conector horizontal"></div>
+    <div class="drags" id="lineah" data-simbolo="lineah" data-toggle="tooltip" data-placement="top" title="conector horizontal largo"></div>
+    
+    
+    <br><br>
+
+
+    <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <input type="text" class="form-control form-control-sm" name="descripcion" id="descripcion">
+        <label for="minutos">Minutos</label>
+        <input type="number" class="form-control form-control-sm" id="minutos" name="minutos" size="4">
+        <label for="persona">Persona que lo realiza</label>
+        <input type="text" class="form-control form-control-sm" name="persona"> <br>
+        <button type="button" id="generar" class="btn btn-light">Generar</button>
+    </div>
+
+
+    <br><br>
+      <img src="images/mas.png" id="columna" data-toggle="tooltip" data-placement="top" title="Agregar columna">&nbsp;<img src="images/more.png" id="more" data-toggle="tooltip" data-placement="top" title="Agregar fila">&nbsp;
+      <img src="images/printer.png" id="imprimir" data-toggle="tooltip" data-placement="top" title="Imprimir"><br>
+  </div>
+
+    <div class="container" id="container">
+
+    <div class="titulo">
+        <div class="tituloprovisional"><h1 class="otida">OTIDA</h1><input type="text"  name="nameotida" id="nameotida" size="20"><button type="button" id="ok" class="btn btn-light">OK</button></div>
+        <div class="titulooficial">
+            <div id="editar" style="display: none;"><img src="images/edit.png" id="edit" alt=""></div>
+        </div>
+        <br>
+    </div>
+
+
+    <div class="flex-container" id="dibujar">
+        <div id="drag" class="dibujarprimero">
+        </div>
+        <div id="drag" class="escribirprimero">
+        </div>
+    </div>
+
+    <div class="bote">
+      <img src="images/bote.png" id="bote" alt="">
+    </div>
+
+    <div class="description">
+        <img src="images/eeww.png" alt="">
+    </div>
+
+    <div class="resumen" id="resumen">
+      <center>RESUMEN</center> <br>
+    Tiempo total:
+        <div id="mins">
+            
+        </div><br>
+        <div id="otrosm">
+            
+        </div>
+    Trabajadores:
+        <div id="personas">
+            
+        </div><br>
+    Operaciones:<br>
+        <div id="ope">
+            Operacion: <p id="oper">-1</p>
+        </div>
+        <div id="insp">
+            Inspeccion: <p id="inspe">-1</p>
+        </div>
+        <div id="act">
+            Actividad complementaria:  <p id="acti">-1</p>
+        </div>
+        <div id="tra">
+            Transporte: <p id="tran">-1</p>
+        </div>
+        <div id="arc">
+            Almacen: <p id="arch">-1</p>
+        </div>
+        <div id="dem">
+            Demora: <p id="demo">-1</p>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
